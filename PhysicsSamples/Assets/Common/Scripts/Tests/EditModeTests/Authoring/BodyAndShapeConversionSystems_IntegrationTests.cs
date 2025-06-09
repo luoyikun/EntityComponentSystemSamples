@@ -24,7 +24,7 @@ namespace Unity.Physics.Tests.Authoring
         {
             CreateHierarchy(new[] { typeof(Rigidbody), typeof(PhysicsBodyAuthoring) }, Array.Empty<Type>(), Array.Empty<Type>());
             Root.GetComponent<PhysicsBodyAuthoring>().LinearDamping = 1f;
-            Root.GetComponent<Rigidbody>().linearDamping = 0.5f;
+            //Root.GetComponent<Rigidbody>().linearDamping = 0.5f;
 
             TestConvertedData<PhysicsDamping>(damping => Assert.That(damping.Linear, Is.EqualTo(0.5f)));
         }
